@@ -20,3 +20,18 @@ const beers = [
     { name: 'Stolen Fruit', abv: 4.6, label: 'https://s3.amazonaws.com/brewerydbapi/beer/YGT30k/upload_uVCHP7-large.png', type: 'Wheat' },
 ];
 
+function refreshArr(beers){
+  return beers.map(beer =>({...beer, label:getLabel(beer)}))
+}
+
+function getLabel(beer){
+  let codeBeer = beer.label.split("/",6).pop();
+  const {name} = beer;
+  let nameBeer = name.replace(/ /g,"").toLowerCase();
+  let url = `https://tecnoshare.sharepoint.com/sites/beer/${codeBeer}/${nameBeer}.png`;
+  return url;
+}
+
+
+console.log(refreshArr(beers));
+

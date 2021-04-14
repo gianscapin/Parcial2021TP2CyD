@@ -22,7 +22,13 @@
    * @param {*} inventors 
    */
   function addDiscoveries(inventor, discoveries, inventors){
-      
+       return inventors.map(investigator =>({...investigator, discover: getDiscoveries(discoveries,inventor,investigator)}))
+  }
+
+  function getDiscoveries(discoveries, inventor,investigator){
+    if(investigator.last == inventor){
+      return discoveries;
+    }
   }
 
   console.log(addDiscoveries('Einstein', 
