@@ -25,7 +25,7 @@
       
   }
 
-  console.log(addDescubrimientos('Einstein', 
+  console.log(addDiscoveries('Einstein', 
   ['Teoría de la relatividad especial','Equivalencia entre masa y energía','Teoría de la relatividad general'], inventors
   ));
 

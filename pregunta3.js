@@ -8,7 +8,7 @@ const greater3 = nums => {
 
 
 // TESTs no modificar
-console.log(greater3[4,3,4,5,1] === 3);
-console.log(greater3[3,4] === undefined);
-console.log(greater3[4,4,4] === 4);
-console.log(greater3[1,1,2,5] === 1);
+console.log(greater3([4,3,4,5,1]) === 3);
+console.log(greater3([3,4]) === undefined);
+console.log(greater3([4,4,4]) === undefined);
+console.log(greater3([1,1,2,5]) === 1);
